@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="60%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Celestial Cyan Starlight Gradient -->
+    <linearGradient id="starlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Imperial Gold Gradient -->
+    <linearGradient id="imperialGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="celestialGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="512" height="512" rx="104" fill="url(#bgGrad)" />
+
+  <!-- Outer Celestial Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#imperialGold)" stroke-width="4" stroke-opacity="0.4" stroke-dasharray="8 6" />
+  <circle cx="256" cy="256" r="196" fill="none" stroke="url(#starlight)" stroke-width="2" stroke-opacity="0.6" />
+
+  <!-- Crescent Moon Motif -->
+  <path d="M 230,120 A 136,136 0 1,0 376,330 A 115,115 0 1,1 230,120 Z" fill="url(#starlight)" opacity="0.35" filter="url(#celestialGlow)" />
+
+  <!-- Radiating Starburst Accents -->
+  <circle cx="256" cy="70" r="6" fill="#fef08a" filter="url(#celestialGlow)" />
+  <circle cx="256" cy="442" r="6" fill="#fef08a" filter="url(#celestialGlow)" />
+  <circle cx="70" cy="256" r="6" fill="#fef08a" filter="url(#celestialGlow)" />
+  <circle cx="442" cy="256" r="6" fill="#fef08a" filter="url(#celestialGlow)" />
+
+  <!-- Legendary Spirit Sword (Center Silhouette) -->
+  <g transform="translate(256, 256) rotate(45)" filter="url(#celestialGlow)">
+    <!-- Blade Glow -->
+    <polygon points="0,-160 -18,-130 -14,80 0,90 14,80 18,-130" fill="url(#starlight)" opacity="0.9" />
+    <!-- Blade Core -->
+    <polygon points="0,-156 -8,-128 -6,78 0,86 6,78 8,-128" fill="#e0f2fe" />
+    <!-- Crossguard -->
+    <rect x="-42" y="80" width="84" height="14" rx="4" fill="url(#imperialGold)" stroke="#fef08a" stroke-width="2" />
+    <!-- Pommel & Hilt -->
+    <rect x="-7" y="94" width="14" height="42" rx="3" fill="#1e293b" />
+    <circle cx="0" cy="144" r="10" fill="url(#imperialGold)" />
+    <circle cx="0" cy="144" r="5" fill="#38bdf8" />
+  </g>
+
+  <!-- Chinese Bagua / Celestial Sparkles -->
+  <polygon points="256,150 262,175 287,181 262,187 256,212 250,187 225,181 250,175" fill="#fef08a" opacity="0.8" />
+  <polygon points="360,260 364,275 379,279 364,283 360,298 356,283 341,279 356,275" fill="#38bdf8" opacity="0.8" />
+  <polygon points="152,320 156,335 171,339 156,343 152,358 148,343 133,339 148,335" fill="#38bdf8" opacity="0.8" />
+
+  <!-- Elegant App Name Monogram Arc Text -->
+  <text x="256" y="440" font-family="'Cairo', sans-serif" font-size="28" font-weight="700" fill="#fef08a" text-anchor="middle" letter-spacing="4">
+    CELESTIA 3D
+  </text>
+</svg>
